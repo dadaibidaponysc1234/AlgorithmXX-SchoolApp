@@ -1,0 +1,406 @@
+.loadingContainer {
+  position: absolute; /* Or fixed, depending on your layout */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the container */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.spinner {
+  border: 4px solid rgba(0, 64, 128, 1);
+  border-top: 4px solid rgba(249, 65, 68, 1);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.LayoutGrid {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  width: 100%;
+  height: auto;
+  padding: 15px 15px 30px 15px;
+}
+
+.left {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.middle {
+  display: grid;
+  grid-template-rows: 70px 1fr;
+}
+.header {
+  background-color: rgba(255, 255, 255, 1);
+}
+.right {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0 0 0 22px;
+}
+.content {
+  background-color: rgba(217, 217, 217, 0.4);
+  border-radius: 10px;
+  padding: 50px 20px 0 20px;
+}
+.logoimg {
+  max-width: 68px;
+}
+
+.logoimg img {
+  width: 100%;
+  object-fit: cover;
+}
+.Logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.logoTxt {
+  font-weight: 700;
+  font-size: 20px;
+}
+.leftList ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.leftListItem {
+  display: flex;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 12px 13px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.leftListItem a {
+  display: flex;
+  gap: 10px;
+}
+.leftListItem:hover {
+  color: rgba(185, 185, 185, 0.4);
+}
+.leftListItem a .active {
+  color: rgba(249, 65, 68, 1);
+}
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logout button {
+  color: #ffffff;
+  background-color: rgba(249, 65, 68, 1);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.logout button:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  position: relative;
+}
+.icon svg {
+  color: rgba(51, 54, 63, 1);
+  width: 100%;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.notificationcount {
+  position: absolute;
+  background-color: rgba(249, 65, 68, 1);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  right: 5px;
+  transition: background-color 0.3s ease;
+}
+.notificationcounthide {
+  display: none;
+}
+
+.icon:hover .icon svg {
+  color: rgba(185, 185, 185, 0.4);
+}
+
+.icon:hover .notificationcount {
+  background-color: rgba(185, 185, 185, 0.4);
+  transform: scale(0.9);
+}
+.NotificationProfile {
+  display: flex;
+}
+.profileimg {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+}
+.profileimg img {
+  width: 100%;
+  object-fit: cover;
+}
+.NotificationProfile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.profilename {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  gap: 5px;
+}
+.profilename p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profilename svg {
+  cursor: pointer;
+}
+
+.events {
+  background-color: rgba(0, 64, 128, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.top {
+  padding: 20px;
+}
+.calender {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.calender .title {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: rgba(217, 217, 217, 1);
+}
+.calender .day {
+  font-size: 16px;
+}
+.top h1 {
+  font-weight: 700;
+}
+.MonthArrow {
+  display: flex;
+  justify-content: space-between;
+}
+.arrows {
+  display: flex;
+  gap: 10px;
+}
+.arrows div {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.arrows div svg {
+  cursor: pointer;
+}
+.weekdays {
+  color: rgba(212, 212, 212, 1);
+  display: flex;
+  gap: 13px;
+  font-size: 14px;
+}
+.dates {
+  display: flex;
+  gap: 23px;
+  font-size: 14px;
+}
+.Dategrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.eventlist ul {
+  list-style-type: none;
+}
+.eventlist {
+  padding: 0 10px 5px 10px;
+}
+.eventItem {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 10px;
+  padding: 10px 10px 10px 10px;
+}
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  align-items: center;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.eventDate .day {
+  font-weight: 400;
+  font-size: 14px;
+}
+.eventDate .date {
+  font-size: 36px;
+}
+/* .changebg .day {
+  color: rgba(255, 255, 255, 1);
+} */
+.eventDetails h4 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.eventDetails p {
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (max-width: 1159px) {
+  .LayoutGrid {
+    grid-template-columns: 180px 1fr 298px;
+  }
+  .eventDetails h4,
+  .eventDetails p {
+    white-space: nowrap; /* Ensure single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .eventDetails h4 {
+    max-width: 150px;
+  }
+  .eventDetails p {
+    max-width: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .LayoutGrid {
+    grid-template-columns: 200px 1fr 350px;
+  }
+}
+.changebg {
+  background-color: rgba(64, 132, 177, 1);
+  border-radius: 10px;
+}
+
+.eventlist li {
+  transition: background-color 0.3s ease; /* Add a transition for smooth effect */
+}
+.eventDateClicked {
+  background-color: transparent !important;
+}
+.eventDateClicked .day {
+  color: rgba(255, 255, 255, 1);
+}
+.eventDetailsClicked {
+  color: rgba(128, 173, 203, 1) !important;
+}
+
+.detailsCont .detailarrow {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.detailsCont {
+  display: flex;
+  align-items: center;
+}
+.notification {
+  background-color: rgba(249, 65, 68, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 30px;
+}
+.Rightcontainer hr {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.TopN {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.notificationdetails {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+.notificationList ul {
+  list-style-type: none;
+}
+.notificationList li {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.Ntitle {
+  font-size: 16px;
+}
+.Ndesc {
+  font-size: 14px;
+  font-weight: 400;
+}
+.Narrow {
+  background-color: rgba(249, 65, 68, 1);
+  color: #000;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.Narrow svg {
+  object-fit: cover;
+}
