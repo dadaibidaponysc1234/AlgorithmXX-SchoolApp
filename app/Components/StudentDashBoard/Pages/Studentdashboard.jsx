@@ -68,7 +68,7 @@ const Studentdashboard = () => {
         <div className={styles2.top}>
           <div className={styles2.greeting}>
             <h1>Hi, {name}</h1>
-            <p>Welcome to the official Foursquare student portal.</p>
+            <p>Welcome to the official SchoolName student portal.</p>
           </div>
           <div className={styles2.topImg}>
             <img src="/female_teacher.svg" alt="" />

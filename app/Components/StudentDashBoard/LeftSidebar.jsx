@@ -28,7 +28,7 @@ const LeftSidebar = ({ setUser }) => {
     {
       Name: "Fees Payment",
       icon: <IoWalletOutline />,
-      route: "/Student/Fees-Payment",
+      // route: "/Student/Fees-Payment",
     },
     {
       Name: "Result",
